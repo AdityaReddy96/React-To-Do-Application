@@ -1,0 +1,196 @@
+/* Main container for the todo app */
+.todo-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 3%;
+  background-image: linear-gradient(100deg, #001214, #001f29);
+  color: white;
+  transition: 0.3s linear;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Header, form, and datetime sections */
+.header,
+.form,
+.datetime {
+  margin: 0 auto;
+  min-height: 10vh;
+  width: 90%;
+  max-width: 800px; /* Adjusted for better alignment */
+}
+
+/* Header styling */
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 3rem;
+  min-height: 25vh;
+  width: 100%;
+}
+
+/* Main heading */
+section h1 {
+  color: #fff;
+  font-size: 3.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Date and time display */
+.date-time {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  font-size: 1.7rem;
+  justify-content: center;
+  margin: 15px 0;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+/* Input field styling */
+form input {
+  margin-left: -30px;
+  padding: 10px;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  width: 100%;
+  max-width: 500px; /* Match this width with the list items */
+  transition: background-color 200ms ease-in-out;
+  background-color: #f2f3f4;
+  color: #001214;
+  height: 50px; /* Fixed height for better alignment */
+}
+
+form input:hover {
+  cursor: text;
+}
+
+form input::placeholder {
+  color: #001214;
+  opacity: 0.7;
+}
+
+/* Form button styling */
+form button {
+  margin-left: -10px;
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+  border: none;
+  outline: none;
+  background-color: #5dade2;
+  color: white;
+  cursor: pointer;
+  height: 70px; /* Match height with input field */
+  transition: background-color 200ms ease-in-out;
+}
+
+form button:hover {
+  background-color: #f1c40f;
+}
+
+.myUnOrdList {
+  margin-left: -110px; /* Simple and effective way to shift the section */
+  /*width: calc(100% - 30px);  Adjust width to prevent overflow */
+}
+
+/* Todo list styling */
+.todo-list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual todo item styling */
+.todo-item {
+  margin: 1.6rem 0;
+  font-size: 20px;
+  color: #1c2833;
+  border-radius: 17px; /* Match border-radius with input field */
+  transition: background-color 200ms ease-in-out;
+  background-color: #f2f3f4;
+  width: 100%; /* Match width with input field */
+  padding: 1rem 2rem; /* Adjusted padding for better alignment */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  overflow-wrap: anywhere;
+}
+
+/* Todo item text */
+.todo-item span {
+  flex: 1; /* Allow text to take remaining space */
+  color: #1c2833;
+}
+
+/* Check and delete buttons */
+.check-btn,
+.delete-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
+.check-btn {
+  background-color: #2ecc71;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+}
+
+/* Completed todo item styling */
+.checkList {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.notCheckList {
+  text-decoration: none;
+}
+
+/* Clear all button */
+.clear-btn {
+  background-color: #e74c3c;
+  font-size: 1.6rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.3rem;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background-color: #8d1407;
+}
