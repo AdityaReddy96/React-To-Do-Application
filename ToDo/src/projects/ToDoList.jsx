@@ -3,6 +3,7 @@ import { IoIosAddCircle } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { useState } from "react";
+import { EditTask } from "./ToDoEdit";
 
 // adding tasks
 export const TodoList = ({
@@ -43,20 +44,12 @@ export const TodoList = ({
             <CiEdit />
           </button>
           {isEditing && (
-            <div className="edit-input-container">
-              <input
-                type="text"
-                value={editedTask}
-                onChange={(e) => setEditedTask(e.target.value)}
-                className="edit-input"
-              />
-              <button className="save-btn" onClick={handleSaveClick}>
-                Save
-              </button>
-              <button className="cancel-btn" onClick={handleCancelClick}>
-                Cancel
-              </button>
-            </div>
+            <EditTask
+              setEditedTask={setEditedTask}
+              editedTask={editedTask}
+              handleSaveClick={handleSaveClick}
+              handleCancelClick={handleCancelClick}
+            />
           )}
         </div>
         <button
